@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-        debug {
+        release {
             storeFile file('C:\\Users\\teixo\\keystore\\P5.jks')
             storePassword 'Psychobug22'
         }
@@ -25,6 +25,7 @@ android {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
     lintOptions {
